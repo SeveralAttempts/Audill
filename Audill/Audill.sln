@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Audill", "Audill\Audill.csproj", "{70541C7B-ACD4-4E50-B820-A263597D67B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{70541C7B-ACD4-4E50-B820-A263597D67B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70541C7B-ACD4-4E50-B820-A263597D67B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70541C7B-ACD4-4E50-B820-A263597D67B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70541C7B-ACD4-4E50-B820-A263597D67B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

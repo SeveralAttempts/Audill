@@ -9,14 +9,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Audill;
+namespace Audill.Views.Windows;
 
 /// <summary>
 /// Interaction logic for MainWindow.xaml
 /// </summary>
-public partial class MainWindow : Window
+public partial class ManageWindow : Window
 {
-    public MainWindow()
+    public ManageWindow()
     {
         InitializeComponent();
     }

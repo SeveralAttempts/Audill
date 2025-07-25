@@ -12,4 +12,17 @@
       <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Page Update="Views\Windows\AuthWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Views\Windows\ManageWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
 </Project>

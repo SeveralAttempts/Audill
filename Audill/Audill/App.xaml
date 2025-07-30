@@ -1,9 +1,19 @@
-﻿<Application x:Class="Audill.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:Audill"
-             StartupUri="Views/Windows/AuthWindow.xaml">
+﻿<Application
+    StartupUri="Views/Windows/AuthWindow.xaml"
+    x:Class="Audill.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:local="clr-namespace:Audill"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="../../Styles/NtTheme.xaml" />
+
+                <ResourceDictionary>
+                    <Style BasedOn="{StaticResource {x:Type Window}}" TargetType="Window" />
+                    <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

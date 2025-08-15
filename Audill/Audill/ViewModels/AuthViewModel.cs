@@ -1,8 +1,21 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using Audill.Interfaces;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Audill.ViewModels;
 
-public class AuthViewModel : ObservableObject
+public partial class AuthViewModel : ObservableObject
 {
-    
+    private readonly IAuthService _userService;
+
+    public AuthViewModel(IAuthService userService)
+    {
+        _userService = userService;
+    }
+
+    [RelayCommand]
+    private void LoadUsers()
+    {
+        _userService.GetUsers();
+    }
 }

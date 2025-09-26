@@ -1,4 +1,4 @@
-﻿namespace Audill.Interfaces;
+﻿namespace Audill.Services.Interfaces;
 
 public interface IAuthService
 {

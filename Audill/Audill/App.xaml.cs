@@ -1,11 +1,12 @@
 ﻿using System.Configuration;
 using System.Data;
 using System.Windows;
-using Audill.Interfaces;
 using Audill.Services;
 using Audill.ViewModels;
 using Audill.Views.Windows;
 using Microsoft.Extensions.DependencyInjection;
+using Audill.Services.Interfaces;
+using Audill.ViewModels.Interfaces;
 
 namespace Audill;
 
@@ -21,7 +22,7 @@ public partial class App : Application
         var services = new ServiceCollection();
 
         services.AddSingleton<IAuthService, AuthService>();
-        services.AddTransient<AuthViewModel>();
+        services.AddSingleton<IAuthViewModel, AuthViewModel>();
         services.AddTransient<AuthWindow>();
         
         _serviceProvider = services.BuildServiceProvider();
@@ -31,7 +32,7 @@ public partial class App : Application
     {
         base.OnStartup(e);
         var initialWindow = _serviceProvider.GetRequiredService<AuthWindow>();
-        initialWindow.DataContext = _serviceProvider.GetRequiredService<AuthViewModel>();
+        initialWindow.DataContext = _serviceProvider.GetRequiredService<IAuthViewModel>();
         initialWindow.Show();
     }
 }
